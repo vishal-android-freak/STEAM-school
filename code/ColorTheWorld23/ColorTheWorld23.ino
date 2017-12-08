@@ -35,7 +35,7 @@ void setup() {
   pinMode(LED_PIN, OUTPUT);
   pinMode(ALIM, OUTPUT);
   pinMode(CFG_BUTTON, INPUT_PULLUP); //si BP ON => level = LOW
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial.println();
   Serial.println("WIO LINK");
   digitalWrite(ALIM, HIGH);
