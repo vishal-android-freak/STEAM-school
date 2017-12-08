@@ -22,7 +22,7 @@
 char * networkName = "your_ssid";
 char * networkPswd = "your_pass";
 WiFiClient client;
-String DweetRequest = "http://dweet.io/dweet/for/ColorTheWorld23";
+String DweetRequest = "http://dweet.io/dweet/for/ColorTheWorld23?";
 
 // Internet domain to request from:
 
@@ -71,7 +71,6 @@ void loop()
       break;
 
     case DWEET_REQUEST:
-      DweetRequest = "http://dweet.io/dweet/for/ColorTheWorld23?";
       DweetRequest += "Sensor=";
       DweetRequest += String(Sensor);
       DweetRequest += "&Sender=vishal";
