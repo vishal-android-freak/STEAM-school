@@ -28,7 +28,6 @@ String DweetRequest = "http://dweet.io/dweet/for/ColorTheWorld23";
 
 enum states {INIT, WIFI_CONNECT, DWEET_REQUEST, STANDBY};
 int State = INIT;
-int counter = 0;
 
 
 void setup() {
@@ -45,7 +44,6 @@ void setup() {
 // the loop function runs over and over again forever
 void loop()
 {
-  counter++;
   int httpCode;
   int Sensor;
   String payload;
@@ -75,7 +73,7 @@ void loop()
     case DWEET_REQUEST:
       DweetRequest = "http://dweet.io/dweet/for/ColorTheWorld23?";
       DweetRequest += "Sensor=";
-      DweetRequest += String(counter);
+      DweetRequest += String(Sensor);
       DweetRequest += "&Sender=vishal";
 
       http.begin(DweetRequest);
